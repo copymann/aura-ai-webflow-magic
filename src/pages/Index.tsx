@@ -1,4 +1,5 @@
 
+import { TooltipProvider } from '@radix-ui/react-tooltip';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -8,18 +9,20 @@ import ParticlesAnimation from '@/components/ParticlesAnimation';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-theme-darker text-theme-light overflow-hidden">
-      <ParticlesAnimation />
-      <Header />
-      
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ContactSection />
-      </main>
-      
-      <Footer />
-    </div>
+    <TooltipProvider>
+      <div className="min-h-screen bg-theme-darker text-theme-light overflow-hidden">
+        <ParticlesAnimation />
+        <Header />
+        
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ContactSection />
+        </main>
+        
+        <Footer />
+      </div>
+    </TooltipProvider>
   );
 };
 
