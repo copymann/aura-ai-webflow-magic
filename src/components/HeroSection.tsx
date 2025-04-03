@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Spline from '@splinetool/react-spline';
 
 const HeroSection = () => {
   return (
@@ -56,49 +57,16 @@ const HeroSection = () => {
           </div>
           
           <div className="lg:w-1/2 mt-12 lg:mt-0 relative">
-            <div className="relative">
+            <div className="relative h-[400px] md:h-[500px] w-full">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-theme-blue/20 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-theme-cyan/20 rounded-full blur-3xl"></div>
-              <div className="glass-card rounded-2xl p-1 relative z-10">
-                <div className="rounded-xl overflow-hidden bg-theme-dark">
-                  <img 
-                    src="https://images.unsplash.com/photo-1655720031605-330bb10a2d73?q=80&w=2832&auto=format&fit=crop" 
-                    alt="AI Visualization" 
-                    className="w-full h-auto rounded-xl mix-blend-lighten opacity-90"
-                  />
-                </div>
+              <div className="glass-card rounded-2xl p-1 relative z-10 w-full h-full overflow-hidden">
+                <Spline 
+                  scene="https://prod.spline.design/VIXARlb7yvqP55ow/scene.splinecode" 
+                  className="w-full h-full"
+                />
               </div>
               <div className="absolute -z-10 -inset-0.5 bg-gradient-to-r from-theme-blue to-theme-cyan rounded-2xl blur opacity-30"></div>
-            </div>
-            
-            <div className="absolute -top-10 right-20 animate-float">
-              <div className="glass-card p-4 rounded-lg max-w-[180px]">
-                <div className="flex items-center">
-                  <div className="h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center">
-                    <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-xs font-medium text-theme-light/70">New task completed</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-10 left-20 animate-float" style={{ animationDelay: '2s' }}>
-              <div className="glass-card p-4 rounded-lg max-w-[180px]">
-                <div className="flex items-center">
-                  <div className="h-8 w-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                    <svg className="h-4 w-4 text-theme-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <p className="text-xs font-medium text-theme-light/70">Workflow optimized</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
